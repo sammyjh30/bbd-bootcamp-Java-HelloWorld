@@ -96,3 +96,36 @@ Declaration sets a piece of memory according to that type.
 Declaration: String variable1;
 Declaraction AND Assignment: String variable2 = "Test";
 
+<Boolean Operations>
+== and a.equals(b) is not the same.
+For strings .equals checks every character
+== checks where in memory
+
+<Immutable>
+You're not gonna change the variable, you're gonna change where it
+points to.
+
+<Streams>
+Second example not a  good example of code
+Wouldn't compile because list could be reassignable
+
+IntStream.range(1, 20).forEach(i -> values.add(new Task("Task" + random.nextInt(10), random.nextInt(10))));
+|                    | |                   |__________________________________________________________| |     
+|                    | |                             construct a new Task with info ints                |
+|____________________| |________________________________________________________________________________|
+    numbers 1 to 19                                    Adding to list
+
+
+<Reduce>
+e.g.
+public static void main(String[] args) {
+    IntStream s = IntStream.range(i:1, i1: 1000)
+            .map(i -> new Random().nextInt(i: 100))
+            .collect(Collectors.toList());
+
+    int evenSum = s.stream().filter(i -> i % 2 = 0).mapToInt(i->i).sum();
+    int addSum = s.stream().filter(i -> i % 2 = 1).mapToInt(i->i).sum();
+
+    int altEvenSum = s.stream().filter(i -> i % 2 = 0).mapToInt(i->i).reduce(i: 0, (a,b)-> a+b);
+                                                                            result of accumilator must be the same type
+Avoid throuwing exceptions in lamdas

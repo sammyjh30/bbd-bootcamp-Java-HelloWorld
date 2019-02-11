@@ -1,0 +1,98 @@
+
+<Create your own exception>
+-Throwable (an interface)_______
+|               |               |
+|-> Errror      |-> Runtime     |-> Exception
+
+
+<Interface vs Class>
+Interfaces can't have members
+
+eg. Create a Person, can't have a members for the name
+
+e.g a Container can contain liquad. So a Cup and a Pan have nothing in similarity except that ehy are containers.
+So an interface Container would have a get volume for that particular instance.
+Cup vs Pan vs Box -> volume would be calculated differently.
+
+
+<Multiple Inheritance>
+
+Interface VolumeContainer
+
+Abstract Class CylinderContainer    &   Abstract Class CubeContainer
+
+Box made of mesh -> is it cubicVolumeContainer? yes
+
+Can inherit, but would change the interface of the getVolume (e.g water), 
+so if nothing specified for the liquad, assume wwater.
+
+<Functional interfaces>
+Lambas, anonymous functions,(clovers?)
+Generics:
+<T, R> two types/classes, can transform (e.g. web request to result)
+
+
+
+Java cannot extend the string type.
+
+<Variables>
+Java has direct(primitive) variables (values) and reference variables(pointers).
+Java has automatic conversion (boxing and unboxing), which will automatically create a reference.
+
+e.g.
+int a=0; => primitive
+Integer a Int = 1; => reference
+
+canot make a list of int, only of Integer.
+
+
+
+<Instance variables>
+e.g. Person class {name and surname}, every person will have a name and a surname (these are instances)
+
+Static variable, every instance doesn't have a copy, class has a copy
+
+<Local variables>
+final variable = constant
+e.g. in a method, can only see local variables, and class/instance methods that have access to.
+
+<Method>
+Difference between method and function?
+Methods need to be in a class.
+In java, everything is a method, as everything needs to be in a class.
+
+
+<Overload Method>
+Method signature has 3 parts: parameter types, name and return type
+Overload method only has one thing that is the same (name)
+
+<Constructors>
+The detail of how to construct these objects
+
+If you don't put a constructor, Java implicitly creates a public one that can be accessed
+
+Constructor always has the same name as the classs name.
+
+<Modifiers>
+<Access Modifiers>
+3access modifiers in Java: public, protected and private
+4 access levels: public, protected (everything except the world can see it), default and private.
+
+final method cannot be overridden, final class cannot be inherited.
+
+
+<Imports>
+Import vs Static
+Import imports classes, nothing specific from that class (e.g. Class.List)
+Static allows public static references to be accessible (many people dislike)
+
+<Abstract Class>
+A class that cannot be instantiated. 
+A class that has at least one abstract method can be a abstract class or an interface.
+
+
+<Declaration vs Assignment>
+Declaration sets a piece of memory according to that type.
+Declaration: String variable1;
+Declaraction AND Assignment: String variable2 = "Test";
+
